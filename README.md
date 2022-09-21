@@ -1,2 +1,2 @@
 # TOP
-Ranking de Artistas.
+TOP is an online database of information related to artists.
