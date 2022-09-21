@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AddArtistActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgFoto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/app_bar_height"
+                android:background="@android:color/darker_gray"
+                android:src="@drawable/ic_photo_size_select_actual"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgDeleteFoto"
+                    android:src="@drawable/ic_close_box"
+                    style="@style/ImageViewButton"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgFromGallery"
+                    android:src="@drawable/ic_image"
+                    style="@style/ImageViewButton"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgFromUrl"
+                    android:src="@drawable/ic_earth_box"
+                    style="@style/ImageViewButton"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</ScrollView>

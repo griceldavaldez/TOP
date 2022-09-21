@@ -9,7 +9,12 @@ import android.widget.RelativeLayout;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.util.List;
 
@@ -42,7 +47,7 @@ public class ArtistaAdapter extends RecyclerView.Adapter<ArtistaAdapter.ViewHold
         holder.tvNombre.setText(artista.getNombreCompleto());
         holder.tvOrden.setText(String.valueOf(artista.getOrden()));
 
-      /*  if (artista.getFotoUrl() != null){
+        if (artista.getFotoUrl() != null){
             RequestOptions options = new RequestOptions();
             options.diskCacheStrategy(DiskCacheStrategy.ALL);
             options.centerCrop();
@@ -54,7 +59,7 @@ public class ArtistaAdapter extends RecyclerView.Adapter<ArtistaAdapter.ViewHold
                     .into(holder.imgFoto);
         } else {
             holder.imgFoto.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_account_box));
-        }*/
+        }
 
     }
 
