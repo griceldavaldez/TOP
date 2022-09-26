@@ -11,4 +11,14 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="artist_hint_nombre">Nombre</string>
     <string name="artist_hint_orden">Orden</string>
+    <string name="artist_hint_apellidos">Apellidos</string>
+    <string name="artist_hint_fechaNacimiento">Fecha de Nacimiento</string>
+    <string name="artist_hint_estatura">Estatura (cm)</string>
+    <string name="artist_hint_lugarNacimiento">Lugar de nacimiento</string>
+    <string name="artist_hint_notas">Notas</string>
+    <string name="addArtist_dialogUrl_title">Añadir foto desde una URL</string>
+    <string name="label_dialog_add">Añadir</string>
+    <string name="label_dialog_cancel">Cancelar</string>
+    <string name="addArtist_error_estaturaMin">La estatura minima debe ser 50 cm</string>
+    <string name="addArtist_error_required">Este campo es requerido</string>
 </resources>

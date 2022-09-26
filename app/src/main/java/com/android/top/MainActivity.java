@@ -1,5 +1,6 @@
 package com.android.top;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity implements OnItemClickListener {
     @BindView(R.id.toolbar)
@@ -107,5 +109,22 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
     @Override
     public void onLongItemClick(Artista artista) {
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK && requestCode == 1){
+            adapter.add(sArtista);
+        }
+    }
+
+    @OnClick(R.id.fab)
+    public void addArtist() {
+        Intent intent = new Intent(MainActivity.this, AddArtistActivity.class);
+        intent.putExtra(Artista.ORDEN, adapter.getItemCount()+1);
+        //startActivity(intent);
+        startActivityForResult(intent, 1);
     }
 }
