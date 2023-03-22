@@ -6,4 +6,5 @@
     <dimen name="imageView_margin">2dp</dimen>
     <dimen name="imageView_inset">-4dp</dimen>
     <dimen name="imageView_radius">18dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>
