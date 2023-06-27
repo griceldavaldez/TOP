@@ -103,12 +103,25 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
     /** Métodos implementados por la interface OnItemClickListener  **/
     @Override
     public void onItemClick(Artista artista) {
+        sArtista.setId(artista.getId());
+        sArtista.setNombre(artista.getNombre());
+        sArtista.setApellidos(artista.getApellidos());
+        sArtista.setFechaNacimiento(artista.getFechaNacimiento());
+        sArtista.setEstatura(artista.getEstatura());
+        sArtista.setLugarNacimiento(artista.getLugarNacimiento());
+        sArtista.setOrden(artista.getOrden());
+        sArtista.setNotas(artista.getNotas());
+        sArtista.setFotoUrl(artista.getFotoUrl());
+
+        Intent intent = new Intent(MainActivity.this, DetalleActivity.class);
+        startActivity(intent);
 
     }
 
     @Override
     public void onLongItemClick(Artista artista) {
-
+        Intent intent = new Intent(MainActivity.this, DetalleActivity.class);
+        startActivity(intent);
     }
 
     @Override

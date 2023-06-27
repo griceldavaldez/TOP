@@ -9,6 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
+        android:id="@+id/containerMain"
         android:focusable="true"
         android:background="?attr/selectableItemBackgroundBorderless">
 
@@ -24,13 +25,18 @@
             android:id="@+id/tvNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/main_padding_small"
+            android:layout_marginLeft="@dimen/main_padding_small"
+            android:layout_marginTop="@dimen/main_padding_small"
+            android:layout_marginEnd="@dimen/main_padding_small"
+            android:layout_marginRight="@dimen/main_padding_small"
+            android:layout_marginBottom="@dimen/main_padding_small"
+            android:layout_toStartOf="@+id/tvOrden"
+            android:layout_toEndOf="@id/imgFoto"
             android:hint="@string/artist_hint_nombre"
             android:maxLines="2"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_margin="@dimen/main_padding_small"
-            android:layout_toEndOf="@id/imgFoto"
-            android:layout_toStartOf="@+id/tvOrden"
-            android:layout_centerVertical="true" />
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvOrden"

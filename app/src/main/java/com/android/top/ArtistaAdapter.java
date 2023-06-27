@@ -33,13 +33,14 @@ public class ArtistaAdapter extends RecyclerView.Adapter<ArtistaAdapter.ViewHold
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_artist, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_artist, parent,
+                false);
         this.context = parent.getContext();
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder( ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, int position) {
         final Artista artista = artistas.get(position);
 
         holder.setListener(artista, listener);
@@ -60,7 +61,6 @@ public class ArtistaAdapter extends RecyclerView.Adapter<ArtistaAdapter.ViewHold
         } else {
             holder.imgFoto.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_account_box));
         }
-
     }
 
     @Override
@@ -82,7 +82,6 @@ public class ArtistaAdapter extends RecyclerView.Adapter<ArtistaAdapter.ViewHold
         AppCompatTextView tvNombre;
         @BindView(R.id.tvOrden)
         AppCompatTextView tvOrden;
-        @Nullable
         @BindView(R.id.containerMain)
         RelativeLayout containerMain;
 
@@ -92,22 +91,20 @@ public class ArtistaAdapter extends RecyclerView.Adapter<ArtistaAdapter.ViewHold
         }
 
         void setListener(final Artista artista, final OnItemClickListener listener){
-            if(containerMain != null){
-                containerMain.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        listener.onItemClick(artista);
-                    }
-                });
+            containerMain.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    listener.onItemClick(artista);
+                }
+            });
 
-                containerMain.setOnLongClickListener(new View.OnLongClickListener() {
-                    @Override
-                    public boolean onLongClick(View view) {
-                        listener.onLongItemClick(artista);
-                        return true;
-                    }
-                });
-            }
+            containerMain.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    listener.onLongItemClick(artista);
+                    return true;
+                }
+            });
         }
     }
 }
